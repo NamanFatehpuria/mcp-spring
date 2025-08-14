@@ -1,0 +1,23 @@
+spring:
+  ai:
+    mcp:
+      server:
+        enabled: true
+        name: mcp-server
+        version: 1.0.0
+        type: SYNC
+        stdio:
+          enabled: false
+        sse-message-endpoint: /mcp/message
+        sse-endpoint: /sse
+        capabilities:
+          tool: true
+          prompt: true
+          resource: true
+          completion: true
+  
+  application:
+    name: mcp-spring
+
+logging.level.org.springframework.ai: DEBUG
+server.port: 8080
