@@ -33,4 +33,12 @@ public class McpController {
         }
         return encodedString;
     }
+
+    @Tool(name = "FunnyStringGenerator", description = "this method generates a funny string based on the given topic")
+    @GetMapping(value = "/funny/{input}")
+    public String generateFunnyString(@PathVariable String input) {
+        String output = "Why did the " + input + " cross the road? To get to the other side!";
+        System.out.println(output);
+        return output;
+    }   
 }
